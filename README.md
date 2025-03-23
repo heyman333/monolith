@@ -1,54 +1,8 @@
-# React + TypeScript + Vite
+# 카카오스타일 FE 공통 패키지 - Monolith 
+`Monolith` 패키지는 카카오스타일 FE 에서 공통으로 사용하는 `Hook`, `Component`, `Util`, `Constant` 를 제공하기 위한 패키지 입니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 작업시 주의사항
+`Monolith` 패키지의 목적은 모든 카카오스타일 FE 프로덕트에서 사용되는것을 목적으로 제공됩니다. 
+때문에 전체가 아닌 한개의 프로젝트 혹은 일부 프로젝트에서 사용되는 `Hook`, `Component`, `Util`, `Constant` 의 추가는 금지됩니다.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+예외적으로 많은 프로젝트에서 사용하는 경우 `FE챕터 구성원`들과 논의후 추가는 가능합니다.
