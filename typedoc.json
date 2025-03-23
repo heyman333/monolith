@@ -1,0 +1,9 @@
+{
+  // "$schema": "https://typedoc-plugin-markdown.org/schema.json",
+  "out": "./docs",
+  "entryPoints": ["src/index.ts"],
+  // "plugin": ["typedoc-plugin-markdown"],
+  "readme": "none",
+  // "plugin": ["typedoc-material-theme"],
+  // "themeColor": "#cb9820",
+}
