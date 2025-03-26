@@ -1,7 +1,7 @@
 /**
  * @packageDocumentation Monolith에서 구성하는 공통 유틸 함수들이 구성되어있는 영역 입니다.
  */
-export { createArray } from "./createArray/createArray";
+export { createArray } from "./create-array/createArray";
 export { delay } from "./delay/delay";
 export { isIos } from "./is-ios/isIos";
-export { isAndroid } from "./isAndroid/isAndroid";
+export { isAndroid } from "./is-android/isAndroid";

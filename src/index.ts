@@ -11,7 +11,7 @@ export { useIsomorphicLayoutEffect } from "./hooks/use-isomorphic-layout-effect/
 export { usePreloadImage  } from "./hooks/use-preload-image/usePreloadImage";
 
 // Utils
-export { createArray } from "./utils/createArray/createArray";
+export { createArray } from "./utils/create-array/createArray";
 export { delay } from "./utils/delay/delay";
 export { isIos } from "./utils/is-ios/isIos";
-export { isAndroid } from "./utils/isAndroid/isAndroid";
+export { isAndroid } from "./utils/is-android/isAndroid";
