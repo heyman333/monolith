@@ -15,6 +15,7 @@ dist-ssr
 .docusaurus
 build
 dist
+docs
 
 
 # Editor directories and files
