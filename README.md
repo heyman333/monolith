@@ -1,4 +1,4 @@
-# 카카오스타일 FE 공통 패키지 - Monolith 
+# 카카오스타일 FE 공통 패키지 - Monolith [BETA]
 `Monolith` 패키지는 카카오스타일 FE 에서 공통으로 사용하는 `Hook`, `Component`, `Util`, `Constant` 를 제공하기 위한 패키지 입니다.
 
 ## 작업시 주의사항
