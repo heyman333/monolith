@@ -14,6 +14,8 @@
     "moduleDetection": "force",
     "jsx": "react-jsx",
     "declaration":true,
+    "sourceMap": true,
+    "noEmit": false,
     "emitDeclarationOnly": true,
 
     /* Linting */
@@ -21,11 +23,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
     "types": ["vitest/globals"]
   },
   "include": ["src/**/*"],
-  "typedocOptions": {                // this!
+  "typedocOptions": {               
     "entryPoints": ["src/index.ts"],
     "out": "docs"
   },

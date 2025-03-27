@@ -1,7 +1,7 @@
 {
-  "name": "monolith",
+  "name": "@croquiscom/monolith",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@9.14.2",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -22,7 +22,7 @@
     "docs:start": "docusaurus start",
     "docs:build": "docusaurus build",
     "test": "vitest run",
-    "release:package": "yarn build && changeset publish"
+    "release:package": "pnpm run build && changeset publish"
   },
   "peerDependencies": {
     "react": "^18 || ^17",
