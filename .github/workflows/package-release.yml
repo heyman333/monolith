@@ -22,16 +22,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
-  
-      - name: setting pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@9.14.2 --activate
-          pnpm --version
 
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+  
+      - uses: actions/cache@v4
+        id: cache
+        with:
+          path: |
+            node_modules
+            .pnpm-store
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+  
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --prod
+  
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
