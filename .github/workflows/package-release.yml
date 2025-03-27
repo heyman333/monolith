@@ -50,3 +50,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PACKAGE_PUBLISH_KEY_GITHUB }}
           NPM_TOKEN: ${{ secrets.PACKAGE_PUBLISH_KEY_NPM }}
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_PUBLISH_KEY_NPM }}
+
+      - name: send slack
+        if: steps.changesets.outputs.published == 'true'  
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_CHANNEL: 'github_frontend'
+          SLACK_USERNAME: 'monolith'
+          SLACK_ICON_EMOJI: ':kakaostyle'
+          SLACK_COLOR: 'good'
+          SLACK_TITLE: 'monolith 패키지 배포 완료 :bmo_party'
+          SLACK_MESSAGE: "배포 내용 확인하기: <https://github.com/croquiscom/monolith/blob/main/CHANGELOG.md|링크>"
+          SLACK_FOOTER: ''
