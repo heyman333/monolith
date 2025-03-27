@@ -48,21 +48,18 @@ interface CountdownProps {
  *
  * @example
  * ```tsx
- * <pre>
- *   // 1시간 카운트 다운
+ *   // MEMO: 1시간 카운트 다운
  *   const { days, hours, minutes, seconds, milliseconds } = useTimer({ timestamp: dayjs().add(1, 'hours').valueOf() })
  *   console.log(days)  // 남은 일
  *   console.log(hours)  // 남은 시간
  *   console.log(minutes)  // 남은 분
  *   console.log(seconds)  // 남은 초
  *   console.log(milliseconds)  // 남은 밀리 세컨드
- * </pre>
  *
+ * 
  * ms 를 안쓰고 second 단위 까지만 사용이 필요한 경우
- * <pre>
- *   // 초단위 쓰로틀링 적용
+ *   // MEMO: 초단위 쓰로틀링 적용
  *   const { days, hours, minutes, seconds, milliseconds } = useTimer({ timestamp: dayjs().add(1, 'hours').valueOf(), throttle_time: 1_000 })
- * </pre>
  * ```
  */
 export const useCountDownTimer = ({ end_at, enable = true, throttle_time = 10 }: CountdownProps) => {
